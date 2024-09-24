@@ -1,3 +1,5 @@
+//this code should work under the batch process environment in Image J. This is not a complete JAVA thing when running out of the batch mode.
+
 run("Invert");
 
 run("RGB Color");
