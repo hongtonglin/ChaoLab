@@ -1,0 +1,48 @@
+run("Invert");
+
+run("RGB Color");
+
+
+//overlay file names without extensions on images
+filename = getTitle();
+
+/*edit the overlaid names: substring() function:
+ *substring(file name, number of characters to be deleted, deleting the extension)
+*/
+filename = substring(filename, 0, indexOf(filename, "."));
+
+//edit the overlaid names: substitute "_" with a new line
+//filename = replace(filename, "_", "\n");
+
+//write down the string and define the location
+setFont("SansSerif", 40, "bold antialiased");
+setColor("black");
+drawString(filename, 100, 100);
+//drawString("2023-08-11", 2300, 200);
+
+//TITLES FOR THUMBNAIL VIEW:
+filename_TN = getTitle();
+filename_TN = substring(filename, 33, indexOf(filename_TN, "."));
+
+//edit the overlaid names: substitute "_" with a new line
+filename_TN = replace(filename_TN, "_", "\n");
+
+//write down the string and define the location
+setFont("SansSerif", 70, "bold antialiased");
+setColor("black");
+drawString("2023-09-18\nHTL MS 1A", 2300, 200);
+drawString(filename_TN, 2300, 390);
+
+
+
+//add the scale bar scale-bar-related details
+run("Scale Bar...", "width=1000 height=1089 thickness=4 font=42 color=Black background=None location=[Lower Left] horizontal bold");
+
+//specificy the string details of the animal/brain info
+setForegroundColor(0, 0, 0);
+setFont("SansSerif", 42, "bold antialiased");
+setColor("black");
+
+//write the string
+drawString("JW 635\nP14 male\nEbf3 null A Het", 15, 1989);
+
